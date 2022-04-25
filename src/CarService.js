@@ -69,7 +69,7 @@ const CarService = {
       for (let { Key } of data.Contents) {
         Key = Key.slice(0, -4);
         if (matchCar(validObj, Key)) {
-          batch.push(S3_ROOT + Key);
+          batch.push(S3_ROOT + Key + `.png`);
         }
       }
       foundCars.push(...batch);
